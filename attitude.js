@@ -75,7 +75,7 @@ function loaded()
     bitmap4.regY = img4.height/2;
     stage.addChild(bitmap4);
 
-    // bitmap2.rotation = 45;
+        // bitmap2.rotation = 45;
     // bitmap3.rotation = 45;
     // bitmap4.rotation = 45;
 
@@ -93,37 +93,37 @@ function changeImage(bitmap,img)
 
  function tick(event) {
     // console.log(event.target + " Was Clicked");
-    console.log(forward1);
-    console.log(rot1);
+    // console.log(forward1);
+    // console.log(rot1);
     if(forward1) {
         if(rot1 < 45) {
-            bitmap2.rotation += 8;
-            rot1 += 8;
+            bitmap4.rotation += 2;
+            rot1 += 2;
         } else {
             forward1 = !forward1;
         }
 
     } else {
         if(rot1 > -45) {
-            bitmap2.rotation -= 8;
-            rot1 -= 8;
+            bitmap4.rotation -= 2;
+            rot1 -= 2;
         } else {
             forward1 = !forward1;
         }
     }
 
     if(forward2) {
-        if(rot2 < 45) {
-            bitmap3.rotation += 2;
-            rot2 += 2;
+        if(rot2 < 10) {
+            bitmap2.y += 1;
+            rot2 += 1;
         } else {
             forward2 = !forward2;
         }
 
     } else {
-        if(rot2 > -45) {
-            bitmap3.rotation -= 2;
-            rot2 -= 2;
+        if(rot2 > -10) {
+            bitmap2.y -= 1;
+            rot2 -= 1;
         } else {
             forward2 = !forward2;
         }
